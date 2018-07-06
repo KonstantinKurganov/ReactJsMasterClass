@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Heading from './components/HeadingComponent';
 
 import Grid from 'react-bootstrap/lib/Button';
 import Row from 'react-bootstrap/lib/Button';
@@ -12,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <div className="wrapper">
-          <h1 className ="heading" >HELLO WORLD!!!</h1>
+          < Heading/>
           <SayFullName name="Kostya" surname="Kurganov" link="https://vk.com/babanlo" />
           <SayFullName name="Olya" surname="Volkova" link="https://vk.com/babanlo" />
       </div>
