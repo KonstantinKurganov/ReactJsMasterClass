@@ -1,34 +1,35 @@
 import React, { Component } from 'react';
-import Heading from './components/HeadingComponent';
-
-import Grid from 'react-bootstrap/lib/Button';
-import Row from 'react-bootstrap/lib/Button';
-import Col from 'react-bootstrap/lib/Button';
-
+import Headrer from './components/Header';
+import Menu from './components/Menu';
+import Main from './components/Main';
+import Grid from 'react-bootstrap/lib/Grid';
+import Row from 'react-bootstrap/lib/Row';
+import Col from 'react-bootstrap/lib/Col';
 import styled from 'styled-components';
-
 import './App.css';
 
+const HeaderWrapper = styled.header`
+    width: 100%;
+    height: 49px;
+    background-color: #242424;
+    opacity: 0.8;
+`
+
 class App extends Component {
-  render() {
-    return (
-      <div className="wrapper">
-          < Heading/>
-          <SayFullName name="Kostya" surname="Kurganov" link="https://vk.com/babanlo" />
-          <SayFullName name="Olya" surname="Volkova" link="https://vk.com/babanlo" />
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="App">
+                <HeaderWrapper>
+                    <Grid>
+                        <Headrer />
+                    </Grid>
+                </HeaderWrapper>       
+                <Menu />
+                <Main />
+            </div>
+        );
+    }
 }
 
-
-function SayFullName(props){
-  return (
-      <div>
-          <h1> Мое имя  {props.name}, фамилия - {props.surname} </h1>
-          <a href={props.link}>Ссылка на мой профиль</a>
-      </div>
-  )
-}
 
 export default App;
