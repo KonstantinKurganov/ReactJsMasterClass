@@ -29,7 +29,6 @@ const MainWrapper = styled.main`
     background-size: cover;
 `
 
-
 class App extends Component {
     render() {
         return (
